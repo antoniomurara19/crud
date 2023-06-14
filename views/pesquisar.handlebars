@@ -1,0 +1,25 @@
+<h1>Pesquise um produto na loja:</h1>
+<br>
+<form action="/pesquisar" method="post">
+<label for="codigo">Código:</label><br>
+<input type="text" name="codigo" placeholder="Insira o código do produto">
+<br><br>
+<button type="submit">Pesquisar</button>
+</form>
+<br><br>
+<table>
+    <tr>
+        <th>Código</th>
+        <th>Verduras</th>
+        <th>Quantidade</th>
+        <th>Preço Unitário</th>
+    </tr>
+{{#if valor}}
+    <tr>
+        <td>{{valor.id}}</td>
+        <td>{{valor.nome}}</td>
+        <td>{{valor.email}}</td>
+        <td>{{valor.celular}}</td>
+    </tr>
+{{/if}}
+</table>

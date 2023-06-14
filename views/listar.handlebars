@@ -1,0 +1,20 @@
+<h1>Lista dos Usuários presenter</h1>
+
+<table>
+    <thead>
+        <th>Código</th>
+        <th>Nome</th>
+        <th>Email</th>
+        <th>Celular</th>
+    </thead>
+{{#each valores}}
+    <tbody>
+        <tr>
+            <td>{{this.id}}</td>
+            <td>{{this.nome}}</td>
+            <td>{{this.email}}</td>
+            <td>{{this.celular}}</td>
+        </tr>
+    </tbody>
+{{/each}}
+</table>
