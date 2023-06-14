@@ -1,8 +1,9 @@
-<h1>Pesquise um produto na loja:</h1>
+<link rel="stylesheet" href="/css/style.css">
+<h1>Pesquise um usuário no sistema:</h1>
 <br>
 <form action="/pesquisar" method="post">
 <label for="codigo">Código:</label><br>
-<input type="text" name="codigo" placeholder="Insira o código do produto">
+<input type="text" name="codigo" placeholder="Insira o código do usuário">
 <br><br>
 <button type="submit">Pesquisar</button>
 </form>
@@ -10,9 +11,9 @@
 <table>
     <tr>
         <th>Código</th>
-        <th>Verduras</th>
-        <th>Quantidade</th>
-        <th>Preço Unitário</th>
+        <th>Nome</th>
+        <th>Email</th>
+        <th>Celular</th>
     </tr>
 {{#if valor}}
     <tr>

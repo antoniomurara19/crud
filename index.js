@@ -31,10 +31,17 @@ app.get('/cadastrar',(req,res)=>{
 
 app.post('/apagar', async (req,res)=>{
     const id =req.body.id
-    console.log(id)
     const pesq = await Cadastro.findOne({raw:true,where:{id:id}})
-    console.log(pesq)
     Cadastro.destroy({where: {id:pesq.id}})
+    const msg1 = 'Produto não encontrado no banco de dados para a exclusão'
+    const msg2 = "Produto excluído da base de dados com sucesso!!"
+    if(pesq != null){
+        Produto.destroy({where: {id: pesq.id}})
+        res.render('apagar', {msg2})
+    }else{
+        res.render('apagar', {msg1})
+    }
+
     res.redirect('/listar')
 })
 app.get('/apagar',(req,res)=>{
